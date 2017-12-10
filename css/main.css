@@ -1,0 +1,48 @@
+/*Se borran algunas propiedades establecidas por default*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*Se aplican propiedades para div contenedor*/
+.container {
+  background-image: url('../assets/images/night.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+/*Se aplican propiedades para div de contenido*/
+.container .kitten {
+  background-image: url('../assets/images/kitten-small.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 50%;
+  height: 40vh;
+}
+/*Se establecen las condiciones para el uso de media queries según el tamaño*/
+
+@media (min-width: 768px) {
+  .container {
+    background-image: url('../assets/images/sunny-day.jpg');
+  }
+
+  .container .kitten {
+    background-image: url('../assets/images/kitten-medium.png');
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    background-image: url('../assets/images/dawn.png');
+  }
+
+  .container .kitten {
+    background-image: url('../assets/images/kitten-large.png');
+	
+	}
+}
